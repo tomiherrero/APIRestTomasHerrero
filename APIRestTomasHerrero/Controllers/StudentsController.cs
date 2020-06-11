@@ -61,7 +61,17 @@ namespace APIRestTomasHerrero.Controllers
             data.SaveChanges();
             return Ok();
         }
+        [HttpDelete("{id}")]
+        public ActionResult<StudentsDB> Delete(int id)
+        {
+            var student = data.Student.FirstOrDefault(x => x.id == id);
+            if (student == null)
+                return NotFound();
 
+            data.Student.Remove(student);
+            data.SaveChanges();
+            return student;
+        }
 
 
     }
