@@ -55,4 +55,3 @@ C:\Programacion V\APIRestTomasHerrero\APIRestTomasHerrero\obj\Debug\netcoreapp3.
 C:\Programacion V\APIRestTomasHerrero\APIRestTomasHerrero\obj\Debug\netcoreapp3.1\APIRestTomasHerrero.dll
 C:\Programacion V\APIRestTomasHerrero\APIRestTomasHerrero\obj\Debug\netcoreapp3.1\APIRestTomasHerrero.pdb
 C:\Programacion V\APIRestTomasHerrero\APIRestTomasHerrero\obj\Debug\netcoreapp3.1\APIRestTomasHerrero.genruntimeconfig.cache
-C:\Programacion V\APIRestTomasHerrero\APIRestTomasHerrero\obj\Debug\netcoreapp3.1\APIRestTomasHerrero.csprojAssemblyReference.cache

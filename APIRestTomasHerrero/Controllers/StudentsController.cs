@@ -42,5 +42,15 @@ namespace APIRestTomasHerrero.Controllers
 
             return student;
         }
+
+        [HttpPost]
+        public ActionResult Post([FromBody] StudentsDB studentDB)
+        {
+            data.Student.Add(studentDB);
+            data.SaveChanges();
+            // CreatedAtRouteResult = funcion de ASP.Net para redireccionar lo que agrega 
+            return new CreatedAtRouteResult("Student", new { id = studentDB.id }, studentDB);
+        }
+
     }
 }
