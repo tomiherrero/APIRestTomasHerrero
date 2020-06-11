@@ -27,13 +27,20 @@ namespace APIRestTomasHerrero.Controllers
 
         //Genero las peticiones 
         [HttpGet]
-
         public ActionResult<IEnumerable<StudentsDB>> Get()
         {
             return data.Student.ToList();
         }
 
+        [HttpGet("{id}", Name = "Student")]
+        public ActionResult<StudentsDB> Get(int id)
+        {
+            // FirstOrDefault = funcion de ASP.Net para ordenar por ID 
+            var student = data.Student.FirstOrDefault(x => x.id == id);
+            if (student == null)
+                return NotFound();
 
-
+            return student;
+        }
     }
 }
