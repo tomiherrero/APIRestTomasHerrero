@@ -13,7 +13,7 @@ namespace APIRestTomasHerrero.Controllers
     // Declaración de Ruta 
     [ApiController]
     [Route("api/[controller]")]
-    public class StudentsController: ControllerBase
+    public class StudentsController : ControllerBase
     {
 
         // Instancio la clase generada de migración.
@@ -51,6 +51,18 @@ namespace APIRestTomasHerrero.Controllers
             // CreatedAtRouteResult = funcion de ASP.Net para redireccionar lo que agrega 
             return new CreatedAtRouteResult("Student", new { id = studentDB.id }, studentDB);
         }
+        [HttpPut("{id}")]
+        public ActionResult Put(int id, [FromBody] StudentsDB value)
+        {
+            if (id != value.id)
+                return BadRequest();
+
+            data.Entry(value).State = EntityState.Modified;
+            data.SaveChanges();
+            return Ok();
+        }
+
+
 
     }
 }
